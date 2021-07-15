@@ -3,26 +3,55 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | armin</title>
+    <meta name="description" content="Dies ist vielleicht die persönliche Website von Armin Laschet. Wer auch immer das ist. Erfahren Sie mehr über ihn und seine Power-Moves."/>
+    <title>Armin Laschet LOL • Head of CDU</title>
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+    <link rel="canonical" href="https://armin-laschet.org/"/>
+    <meta property="og:locale" content="de_DE"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Armin Laschet LOL • Head of CDU"/>
+    <meta property="og:description" content="Dies ist vielleicht die persönliche Website von Armin Laschet. Wer auch immer das ist. Erfahren Sie mehr über ihn und seine Power-Moves."/>
+    <meta property="og:url" content="https://armin-laschet.org/"/>
+    <meta property="og:site_name" content="Armin Laschet LOL • Head of CDU und deren Kanzlerkandidat."/>
+    <meta name="twitter:label2" content="Geschätzte Lesezeit">
+    <meta name="twitter:data2" content="15 Minuten">
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+  
+    </div>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <canvas id="unity-canvas" width=100vw height=95vh></canvas>
       <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
+        <div id="unity-logo">
+          <img src="TemplateData/logo.gif">
+        </div>
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-      <div id="unity-warning"> </div>
+      <!-- <div id="unity-warning"> </div> -->
       <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
+        <div class="nav-logo">Armin Laschet • Head of CDU</div> 
+        <div class="menu">
+          <button class="menu-button" onclick="">Teilen</button>
+          <button class="menu-button" onclick="">Ueber uns}</button>
+          <button class="menu-button" onclick="">Impressum</button>
+        </div>
+        <!-- <div id="unity-webgl-logo"></div> -->
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">armin</div>
+        <!-- <div id="unity-build-title">armin</div> -->
       </div>
     </div>
+    <!-- <div class="nav">
+      <div class="nav-logo">Armin Laschet • Head of CDU</div> 
+      <div class="menu">
+        <button class="menu-button" onclick="">Teilen</button>
+        <button class="menu-button" onclick="">Ueber uns}</button>
+        <button class="menu-button" onclick="">Impressum</button>
+      </div>
+    </div> -->
     <script>
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -58,12 +87,12 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/webgl.loader.js";
       var config = {
-        dataUrl: buildUrl + "/webgl.data.unityweb",
-        frameworkUrl: buildUrl + "/webgl.framework.js.unityweb",
-        codeUrl: buildUrl + "/webgl.wasm.unityweb",
+        dataUrl: buildUrl + "/webgl.data",
+        frameworkUrl: buildUrl + "/webgl.framework.js",
+        codeUrl: buildUrl + "/webgl.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "armin",
+        productName: "Armin Laschet",
         productVersion: "0.1",
         showBanner: unityShowBanner,
       };
@@ -75,29 +104,29 @@
       // the canvas DOM size and WebGL render target sizes yourself.
       // config.matchWebGLToCanvasSize = false;
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
+      // if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      //   // Mobile device style: fill the whole browser client area with the game canvas:
 
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        container.className = "unity-mobile";
+      //   var meta = document.createElement('meta');
+      //   meta.name = 'viewport';
+      //   meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+      //   document.getElementsByTagName('head')[0].appendChild(meta);
+      //   container.className = "unity-mobile";
 
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
+      //   // To lower canvas resolution on mobile devices to gain some
+      //   // performance, uncomment the following line:
+      //   config.devicePixelRatio = 1;
 
-        canvas.style.width = window.innerWidth + 'px';
-        canvas.style.height = window.innerHeight + 'px';
+      //   canvas.style.width = window.innerWidth + 'px';
+      //   canvas.style.height = window.innerHeight + 'px';
 
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
-      } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+      //   // unityShowBanner('WebGL builds are not supported on mobile devices.');
+      // } else {
+      //   // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-      }
+        canvas.style.width = "100vw";
+        canvas.style.height = "95vh";
+      // }
 
       loadingBar.style.display = "block";
 
