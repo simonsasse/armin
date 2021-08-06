@@ -19,7 +19,13 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-  
+    <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
+    <script>
+      var md = new MobileDetect(window.navigator.userAgent);
+      if (md.mobile() || md.tablet()) {
+          document.location.href = 'mobile-page.html';
+      }
+  </script>
     </div>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=100vw height=95vh></canvas>
@@ -36,7 +42,7 @@
         <div class="nav-logo">Armin Laschet • Head of CDU</div> 
         <div class="menu">
           <button class="menu-button" onclick="">Teilen</button>
-          <button class="menu-button" onclick="">Ueber uns}</button>
+          <button class="menu-button" onclick="">Ueber uns</button>
           <button class="menu-button" onclick="">Impressum</button>
         </div>
         <!-- <div id="unity-webgl-logo"></div> -->

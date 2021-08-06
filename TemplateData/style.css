@@ -1,4 +1,7 @@
-body { padding: 0; margin: 0 }
+body { padding: 0; 
+    margin: 0;
+    font-family: 'Montserrat';
+    }
 #unity-container { position: relative }
 /* #unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) } */
 #unity-container.unity-mobile { width: 100%; height: 100% }
@@ -88,3 +91,58 @@ body { padding: 0; margin: 0 }
     font-weight: 400;
 }
 
+/* Mobile WEBSITE */
+.desktop-notice{
+    position: fixed;
+    color: white;
+    align-content: center;
+    bottom: 2vh;
+    padding: 3px;
+    right: 5vw;
+    width: 90vw;
+    border-radius: 10px;
+    height: auto;
+    color: red;
+    background-color: white;
+}
+
+.cdu-header{
+    position: absolute;
+    color: white;
+    align-content: right;
+    top: 1vh;
+    right: 2vw;
+}
+
+.cdu-banner{
+    margin: 0px;
+    border-width: 0px;
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+    position: absolute;
+    color: blue;
+    align-content: center;
+    bottom: 10vh;
+    left: 50vw;
+    transform: translate(-50%, -50%); 
+}
+h2{
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    font-weight: 800;
+}
+.mobile-container{
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.video{
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
