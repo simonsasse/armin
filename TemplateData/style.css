@@ -109,10 +109,10 @@ body {
     align-self: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: 25%;
+    margin-left: 0%;
     background-color: rgb(26, 65, 115);
-    border-radius: 5px;
-    width: 50%;
+    /* border-radius: 5px; */
+    width: 100%;
     color: white;
     align-content: center;
     border-width: 0px;
@@ -182,14 +182,17 @@ h1{
     overflow-x: hidden;
 }
 .mobile-container-scroll{
+    border-bottom-width: 2px;
+    border-bottom-color: rgb(26, 65, 115);
+    border-bottom-style: solid;
     position: relative;
     width: 60%;
     height: auto;
     overflow-x: hidden;
     margin-left: 20%;
     margin-right: 20%;  
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 
 @media (max-aspect-ratio: 2/3){
