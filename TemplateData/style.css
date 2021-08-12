@@ -261,10 +261,10 @@ p{
 }
 h3{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    /* font-size: 60%; */
+    font-size: 90%;
 }
 h2{
-    /* font-size: 90%; */
+    font-size: 1.4;
     line-height: 1.4;
     color: rgb(26, 65, 115);
 }
@@ -278,6 +278,13 @@ li{
 .floating-image-right, .floating-image-left{
     height: 60vh;
     margin: 10px;
+}
+
+@media (max-aspect-ratio: 2/3){
+    .floating-image-left, .floating-image-right{
+        height: auto;
+        width: 50vw;
+    }
 }
 
 .floating-image-left{
