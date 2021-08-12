@@ -1,7 +1,14 @@
-body { padding: 0; 
-    margin: 0;
-    font-family: 'Montserrat';
+body { 
+    padding: 0px; 
+    margin: 0px;
+    border-width: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 160%;
+    line-height: 1.2;
+    width: 100vw;
     }
+
+    
 #unity-container { position: relative }
 /* #unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) } */
 #unity-container.unity-mobile { width: 100%; height: 100% }
@@ -92,18 +99,41 @@ body { padding: 0;
 }
 
 /* Mobile WEBSITE */
+.mobile-button{
+    align-self: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 25%;
+    background-color: rgb(26, 65, 115);
+    border-radius: 5px;
+    width: 50%;
+    color: white;
+    align-content: center;
+    border-width: 0px;
+    font-size: xx-large;
+}
+.mobile-button:hover{
+    background-color: grey;
+}
+.mobile-button:active{
+    background-color: grey;
+}
 .desktop-notice{
-    position: fixed;
+    border-width: 2px;
+    border-style: solid;
+    border-color: red;
+    font-size: smaller;
+    position: absolute;
     color: white;
     align-content: center;
     bottom: 2vh;
     padding: 3px;
     right: 5vw;
     width: 90vw;
-    border-radius: 10px;
     height: auto;
     color: red;
     background-color: white;
+
 }
 
 .cdu-header{
@@ -120,23 +150,50 @@ body { padding: 0;
     padding: 10px 10px 10px 10px;
     background-color: white;
     position: absolute;
-    color: blue;
+    color: rgb(26, 65, 115);
     align-content: center;
     bottom: 10vh;
     left: 50vw;
     transform: translate(-50%, -50%); 
 }
-h2{
+h1{
+    color: rgb(26, 65, 115);
     margin-block-end: 0px;
     margin-block-start: 0px;
     font-weight: 800;
+    font-size: 150%;
+}
+
+.anton-font{
+ font-family: 'Anton';
 }
 .mobile-container{
+    margin: 0px;
+    position: relative;
     width: 100vw;
     height: 100vh;
     overflow-y: hidden;
     overflow-x: hidden;
 }
+.mobile-container-scroll{
+    position: relative;
+    width: 60%;
+    height: auto;
+    overflow-x: hidden;
+    margin-left: 20%;
+    margin-right: 20%;   
+}
+
+@media (max-aspect-ratio: 2/3){
+    .mobile-container-scroll{
+        flex-wrap: wrap;
+        margin-left: 2%;
+        margin-right: 2%;
+        width: 96%;
+    }
+}
+
+
 .video{
     transform: translate(-50%, -50%);
     position: absolute;
@@ -146,3 +203,67 @@ h2{
     width: 100vw;
     object-fit: cover;
 }
+
+.share-video{
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+    /* transform: translate(-50%, -50%); */
+    position: relative;
+    margin: 10px;
+    height: 40vh;
+    width: auto;
+}
+
+
+.page-footer-menu{
+    padding-bottom: 20px;
+    padding-top: 10px;
+    height: auto;
+    width: 100vw;
+    margin: 0px;
+    align-content: center;
+    background-color: rgb(26, 65, 115);
+    color: white;
+    position: relative ;
+    bottom: 0vh;
+}
+a{
+    font-size: 50%;
+    padding: 2px;
+    color: white;
+}
+a:active{
+    background-color: grey;
+}
+a:hover > h1{
+    color: cornflowerblue;
+}
+
+.impressum-container{
+    padding: 20px;
+    position: absolute;
+    top:1vh;
+}
+
+p{
+    font-size: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(77, 77, 77);
+}
+h3{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 60%;
+}
+h2{
+    font-size: 70%;
+    line-height: 1.4;
+    color: rgb(26, 65, 115);
+}
+
+li{
+    font-size: 14px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(77, 77, 77);
+}
+
