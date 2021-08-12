@@ -3,14 +3,14 @@ body {
     margin: 0px;
     border-width: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 160%;
+    font-size: 100%;
     line-height: 1.2;
     width: 100vw;
     }
 
     @media (max-aspect-ratio: 2/3){
         body{
-            font-size: 2;
+            font-size: 240%;
         }
     }
 
@@ -167,7 +167,7 @@ h1{
     margin-block-end: 0px;
     margin-block-start: 0px;
     font-weight: 800;
-    font-size: 150%;
+    /* font-size: 150%; */
 }
 
 .anton-font{
@@ -184,10 +184,12 @@ h1{
 .mobile-container-scroll{
     position: relative;
     width: 60%;
-    height: 100vh;
+    height: auto;
     overflow-x: hidden;
     margin-left: 20%;
-    margin-right: 20%;   
+    margin-right: 20%;  
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 
 @media (max-aspect-ratio: 2/3){
@@ -235,7 +237,7 @@ h1{
     bottom: 0vh;
 }
 a{
-    font-size: 50%;
+    /* font-size: 50%; */
     padding: 2px;
     color: white;
 }
@@ -253,23 +255,35 @@ a:hover > h1{
 }
 
 p{
-    font-size: 15px;
+    /* font-size: 15px; */
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(77, 77, 77);
 }
 h3{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 60%;
+    /* font-size: 60%; */
 }
 h2{
-    font-size: 70%;
+    /* font-size: 90%; */
     line-height: 1.4;
     color: rgb(26, 65, 115);
 }
 
 li{
-    font-size: 14px;
+    /* font-size: 14px; */
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(77, 77, 77);
 }
 
+.floating-image-right, .floating-image-left{
+    height: 60vh;
+    margin: 10px;
+}
+
+.floating-image-left{
+    float: left;
+}
+
+.floating-image-right{
+    float: right;
+}
