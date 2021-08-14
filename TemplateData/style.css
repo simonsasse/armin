@@ -1,3 +1,5 @@
+/* @import "reset.css"; */
+
 body { 
     padding: 0px; 
     margin: 0px;
@@ -8,7 +10,7 @@ body {
     width: 100vw;
     }
 
-    @media (max-aspect-ratio: 2/3){
+    @media (max-aspect-ratio: 3/4){
         body{
             font-size: 240%;
         }
@@ -16,7 +18,12 @@ body {
 
     
 #unity-container { position: relative }
-/* #unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) } */
+#unity-container.unity-desktop {
+     margin: 0px;
+     padding: 0px;
+     border-width: 0px; 
+     height: 95vh;
+    }
 #unity-container.unity-mobile { width: 100%; height: 100% }
 #unity-canvas { background: rgb(70, 70, 70); }
 .unity-mobile #unity-canvas { width: 100%; height: 100% }
@@ -103,8 +110,59 @@ body {
     font-size: xx-large;
     font-weight: 400;
 }
+/* DESKTOP ONLY */
 
+.nav-bar-desktop{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100vw;
+    height: 5vh;
+    background-color: rgb(26, 65, 115);
+    align-items: center;
+    align-content: center;
+    padding: 0px;
+    flex-grow: initial;
+}
+.nav-bar-button{
+    margin: 0px;
+    border-width: 0px;
+    width: 32vw;
+    align-items: stretch;
+    align-content: center;
+    height: 100%;
+    font-size: xx-large;
+    background-color: rgb(26, 65, 115);
+    color: white;
+}
+.nav-bar-button:hover{
+    background-color: rgba(102, 115, 133, 0.521);
+}
 /* Mobile WEBSITE */
+
+.anounce-container{
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    bottom: 2vh;
+    left: 50vw;
+    transform: translate(-50%, 0%); 
+}
+.scroll-hint-mobile{
+    left: 50vw;
+    top: 20vh;
+    transform: translate(-50%, -50%); 
+    width: auto;
+    margin: 10px;
+    border-width: 0px;
+    padding: 10px 10px 10px 10px;
+    color: white;
+    position: absolute;
+    /* background-color: rgb(26, 65, 115); */
+   
+    /* left: 50vw; */
+    transform: translate(-50%, -50%); 
+}
 .mobile-button{
     align-self: center;
     margin-top: 50px;
@@ -117,7 +175,15 @@ body {
     align-content: center;
     border-width: 0px;
     font-size: xx-large;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
+@media (max-aspect-ratio: 3/4){
+    .mobile-button{
+        font-size: 250%;
+    }
+}
+
 .mobile-button:hover{
     background-color: grey;
 }
@@ -125,6 +191,9 @@ body {
     background-color: grey;
 }
 .desktop-notice{
+
+    transform: translate(-50%, -50%); 
+
     border-width: 2px;
     border-style: solid;
     border-color: red;
@@ -133,8 +202,9 @@ body {
     color: white;
     align-content: center;
     bottom: 2vh;
+    margin: 10px;
     padding: 3px;
-    right: 5vw;
+    left: 50vw;
     width: 90vw;
     height: auto;
     color: red;
@@ -146,18 +216,20 @@ body {
     position: absolute;
     color: white;
     align-content: right;
-    top: 1vh;
-    right: 2vw;
+    top: 2vh;
+    right: 4vw;
 }
 
 .cdu-banner{
-    margin: 0px;
+    left: 50vw;
+    /* transform: translate(-50%, 0%);  */
+    width: auto;
+    margin: 10px;
     border-width: 0px;
     padding: 10px 10px 10px 10px;
     background-color: white;
     position: absolute;
     color: rgb(26, 65, 115);
-    align-content: center;
     top: 70vh;
     left: 50vw;
     transform: translate(-50%, -50%); 
@@ -195,7 +267,7 @@ h1{
     padding-bottom: 5vh;
 }
 
-@media (max-aspect-ratio: 2/3){
+@media (max-aspect-ratio: 3/4){
     .mobile-container-scroll{
         flex-wrap: wrap;
         margin-left: 2%;
@@ -279,21 +351,33 @@ li{
 }
 
 .floating-image-right, .floating-image-left{
-    height: 60vh;
-    margin: 10px;
+    height: 40vh;
+    /* margin: 10px; */
 }
 
-@media (max-aspect-ratio: 2/3){
+.floating-image-wide{
+    height: 30vh;
+    float: left;
+    margin: 5px 0px 5px 5px;
+}
+
+@media (max-aspect-ratio: 3/4){
     .floating-image-left, .floating-image-right{
         height: auto;
         width: 50vw;
+    }
+    .floating-image-wide{
+        width: 100vw;
     }
 }
 
 .floating-image-left{
     float: left;
+    margin: 5px 5px 5px 0px;
 }
 
 .floating-image-right{
     float: right;
+    margin: 0px 5px 5px 5px;
+
 }
