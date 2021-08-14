@@ -8,6 +8,7 @@ body {
     font-size: 100%;
     line-height: 1.2;
     width: 100vw;
+    overflow-x: hidden;
     }
 
     @media (max-aspect-ratio: 3/4){
@@ -23,6 +24,7 @@ body {
      padding: 0px;
      border-width: 0px; 
      height: 95vh;
+     overflow-x: hidden;
     }
 #unity-container.unity-mobile { width: 100%; height: 100% }
 #unity-canvas { background: rgb(70, 70, 70); }
@@ -123,6 +125,7 @@ body {
     align-content: center;
     padding: 0px;
     flex-grow: initial;
+    overflow-x: hidden;
 }
 .nav-bar-button{
     margin: 0px;
@@ -147,6 +150,8 @@ body {
     bottom: 2vh;
     left: 50vw;
     transform: translate(-50%, 0%); 
+    overflow-x: hidden;
+
 }
 .scroll-hint-mobile{
     left: 50vw;
@@ -285,6 +290,8 @@ h1{
     height: 100vh;
     width: 100vw;
     object-fit: cover;
+    overflow-x: hidden;
+
 }
 
 .share-video{
@@ -310,6 +317,8 @@ h1{
     color: white;
     position: relative ;
     bottom: 0vh;
+    overflow-x: hidden;
+
 }
 a{
     /* font-size: 50%; */
@@ -327,6 +336,8 @@ a:hover > h1{
     padding: 20px;
     position: absolute;
     top:1vh;
+    overflow-x: hidden;
+
 }
 
 p{
@@ -358,7 +369,7 @@ li{
 .floating-image-wide{
     height: 30vh;
     float: left;
-    margin: 5px 0px 5px 5px;
+    padding: 5px 0px 5px 5px;
 }
 
 @media (max-aspect-ratio: 3/4){
@@ -367,17 +378,17 @@ li{
         width: 50vw;
     }
     .floating-image-wide{
-        width: 100vw;
+        width: 100%;
     }
 }
 
 .floating-image-left{
     float: left;
-    margin: 5px 5px 5px 0px;
+    padding: 5px 5px 5px 0px;
 }
 
 .floating-image-right{
     float: right;
-    margin: 0px 5px 5px 5px;
+    padding: 0px 5px 5px 5px;
 
 }
