@@ -143,12 +143,13 @@ body {
     overflow-y: hidden;
 }
 .nav-bar-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     margin: 0px;
     border-width: 0px;
     width: 32vw;
-    align-items: stretch;
-    align-content: center;
     height: 100%;
     font-size: xx-large;
     background-color: rgb(26, 65, 115);
