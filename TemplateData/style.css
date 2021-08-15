@@ -367,18 +367,20 @@ li{
 }
 
 .floating-image-wide{
-    height: 30vh;
+    width: 40%;
     float: left;
-    padding: 5px 0px 5px 5px;
+    padding: 5px 5px 5px 0px;
 }
 
 @media (max-aspect-ratio: 3/4){
     .floating-image-left, .floating-image-right{
         height: auto;
-        width: 50vw;
+        width: 100%;
+        padding: 5px 0px 5px 0px;
     }
     .floating-image-wide{
         width: 100%;
+        padding: 5px 5px 5px 5px;
     }
 }
 
@@ -389,6 +391,6 @@ li{
 
 .floating-image-right{
     float: right;
-    padding: 0px 5px 5px 5px;
+    padding: 5px 0px 5px 5px;
 
 }
