@@ -18,16 +18,23 @@ body {
     }
 
     
-#unity-container { position: relative }
+#unity-container { 
+    position: relative;
+    overflow-y: hidden;
+}
 #unity-container.unity-desktop {
      margin: 0px;
      padding: 0px;
      border-width: 0px; 
      height: 95vh;
-     overflow-x: hidden;
+     overflow-y: hidden;
     }
 #unity-container.unity-mobile { width: 100%; height: 100% }
-#unity-canvas { background: rgb(70, 70, 70); }
+#unity-canvas { 
+    background: rgb(70, 70, 70);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 .unity-mobile #unity-canvas { width: 100%; height: 100% }
 #unity-loading-bar
 { position: absolute; 
@@ -393,4 +400,8 @@ li{
     float: right;
     padding: 5px 0px 5px 5px;
 
+}
+
+a{
+    color: rgb(26, 65, 115);
 }
