@@ -135,6 +135,7 @@ body {
     overflow-x: hidden;
 }
 .nav-bar-button{
+    text-decoration: none;
     margin: 0px;
     border-width: 0px;
     width: 32vw;
@@ -369,25 +370,25 @@ li{
 }
 
 .floating-image-right, .floating-image-left{
-    height: 40vh;
+    height: 50vh;
     /* margin: 10px; */
 }
 
 .floating-image-wide{
-    width: 40%;
+    width: 60%;
     float: left;
-    padding: 5px 5px 5px 0px;
+    padding: 10px 10px 10px 0px;
 }
 
 @media (max-aspect-ratio: 3/4){
     .floating-image-left, .floating-image-right{
         height: auto;
         width: 100%;
-        padding: 5px 0px 5px 0px;
+        padding: 10px 0px 10px 10px;
     }
     .floating-image-wide{
         width: 100%;
-        padding: 5px 5px 5px 5px;
+        padding: 10px 10px 10px 10px;
     }
 }
 
@@ -411,4 +412,11 @@ a{
 }
 .footer-link:hover{
     color: gray;
+}
+
+.invisible{
+    color: inherit;
+    font-size: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    width: 32vw;
 }

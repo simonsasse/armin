@@ -21,12 +21,14 @@
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
+
     <script>
       var md = new MobileDetect(window.navigator.userAgent);
       if (md.mobile() || md.tablet()) {
           document.location.href = 'mobile-page.html';
       }
   </script>
+  <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
   <!-- pop up -->
   <!-- <script>
     alert("Hi, schön, dass du da bist. Wir sammeln keine Cookies. Cool, oder?");
@@ -49,12 +51,11 @@
       </div> 
     </div>
     <div class="nav-bar-desktop">
-      <button class="nav-bar-button" onclick="location.href='#content-container'">Information</button>
+      <a class="nav-bar-button" href="#content-container"><center>Information</center></a>
       <button class="nav-bar-button" onclick="location.href='share.html'">Teilen</button>
       <button class="nav-bar-button" target="_blank" 
       onclick="location.href='TemplateData/Armin_Laschet_Org Quellensheet Stand 12_08_2021.pdf'" 
       download="TemplateData/Armin_Laschet_Org Quellensheet Stand 12_08_2021.pdf">Quellen</button>
-
     </div>
     <div class="cdu-header"><h1 class="anton-font" style="font-size: 400%; color: white;">CDU</h1></div>
 
@@ -77,7 +78,7 @@
       <button onclick="location.href='share.html'" class="mobile-button">Share Pics</button>
 
       </div>
-      <div class="mobile-container-scroll">
+      <div id="content-1" class="mobile-container-scroll">
         <div style="height: 5vh;"></div>
 
         <h2>Lobbyismus und CDU</h2>
@@ -116,7 +117,7 @@
         </p>
         <div style="height: 5vh;"></div>
       </div>
-      <div class="mobile-container-scroll">
+      <div  id="content-2" class="mobile-container-scroll">
         <div style="height: 5vh;"></div>
         <h2>Klimakrise und CDU
         </h2>
@@ -150,7 +151,7 @@
           </p>
           <div style="height: 5vh;"></div>
         </div>
-        <div class="mobile-container-scroll">
+        <div  id="content-3" class="mobile-container-scroll">
           <div style="height: 5vh;"></div>
           
           <h2>Konservative CDU
@@ -268,5 +269,28 @@
       };
       document.body.appendChild(script);
     </script>
+    <script src="gsap-public/minified/gsap.min.js"></script>
+    <script src="gsap-public/minified/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="animation.js"></script>
+    <script>
+      // Smooth scrolling when clicking an anchor link
+      $(document).ready(function(){
+      
+        // Klick auf eien Link, der eine Raute (# = Anker) enthält
+        $('a[href^="#"]').on('click',function(e) {
+          e.preventDefault();
+      
+          var target = this.hash;
+          var $target = $(target);
+          $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+          }, 400, "swing", function () {
+            window.location.hash = target;
+                  $('html').animate({ 'scrollTop': scrollToPosition + 100}, 100);
+          });
+        });
+      });
+       </script>
   </body>
 </html>

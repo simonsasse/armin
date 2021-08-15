@@ -47,7 +47,7 @@
       
     </div>
     <!-- CONTENT -->
-    <div class="mobile-container-scroll">
+    <div id="content-container" class="mobile-container-scroll">
       
       <center>
         <h2>Zusammenhalt stiften und Zukunft gestalten – das wird mit uns schwierig. </h2>
@@ -65,7 +65,7 @@
       <button onclick="location.href='share.html'" class="mobile-button">Share Pics</button>
 
       </div>
-      <div class="mobile-container-scroll">
+      <div id="content-1" class="mobile-container-scroll">
         <div style="height: 5vh;"></div>
 
         <h2>Lobbyismus und CDU</h2>
@@ -104,7 +104,7 @@
         </p>
         <div style="height: 5vh;"></div>
       </div>
-      <div class="mobile-container-scroll">
+      <div  id="content-2" class="mobile-container-scroll">
         <div style="height: 5vh;"></div>
         <h2>Klimakrise und CDU
         </h2>
@@ -138,7 +138,7 @@
           </p>
           <div style="height: 5vh;"></div>
         </div>
-        <div class="mobile-container-scroll">
+        <div id="content-3" class="mobile-container-scroll">
           <div style="height: 5vh;"></div>
           
           <h2>Konservative CDU
@@ -183,4 +183,28 @@
     </center>
     </div>
   </body>
+  
+  <script src="gsap-public/minified/gsap.min.js"></script>
+  <script src="gsap-public/minified/ScrollTrigger.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="animation.js"></script>
+  <script>
+    // Smooth scrolling when clicking an anchor link
+    $(document).ready(function(){
+    
+      // Klick auf eien Link, der eine Raute (# = Anker) enthält
+      $('a[href^="#"]').on('click',function(e) {
+        e.preventDefault();
+    
+        var target = this.hash;
+        var $target = $(target);
+        $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+        }, 400, "swing", function () {
+          window.location.hash = target;
+                $('html').animate({ 'scrollTop': scrollToPosition + 100}, 100);
+        });
+      });
+    });
+     </script>
 </html>
