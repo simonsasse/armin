@@ -405,3 +405,10 @@ li{
 a{
     color: rgb(26, 65, 115);
 }
+
+.footer-link{
+    color: white;
+}
+.footer-link:hover{
+    color: gray;
+}
