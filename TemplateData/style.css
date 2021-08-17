@@ -216,21 +216,21 @@ body {
 
     transform: translate(-50%, -50%); 
 
-    border-width: 2px;
+    border-width: 5px;
     border-style: solid;
     border-color: red;
-    font-size: smaller;
-    position: absolute;
+    font-size: larger;
+    position: fixed;
     color: white;
     align-content: center;
-    bottom: 2vh;
+    bottom: 8vh;
     margin: 10px;
     padding: 3px;
     left: 50vw;
     width: 90vw;
     height: auto;
-    color: red;
-    background-color: white;
+    color: white;
+    background-color: red;
 
 }
 
