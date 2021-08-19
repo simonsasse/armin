@@ -1,55 +1,75 @@
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(
-    "#content-1",
+ScrollTrigger.batch(
+    ".mobile-container-scroll",
     {
-        scrollTrigger: {
-            // scrub: true,
-            trigger: "#content-1",
-            start: "top 60%",
-            end: "top 30%",
-            toggleActions:"restart none none reverse"
-        },
-        x: "-10vw",
-        alpha: "0",
-        ease:"ease"
-        
+        onEnter: batch => gsap.from(
+            batch,
+            {
+                alpha:0,
+                x: "20vw",
+                ease: "ease",
+                scale: 0.5
+            })
     }
-);
+)
 
-gsap.from(
-    "#content-2" ,
-    {
-        scrollTrigger: {
-            // scrub: true,
-            trigger: "#content-2",
-            start: "top 60%",
-            end: "top 30%",
-            toggleActions:"restart none none reverse"
-        },
-        x: "10vw",
-        alpha: "0",
-        ease:"ease"
-        
-    }
-);
 
-gsap.from(
-    "#content-3",
-    {
-        scrollTrigger: {
-            // scrub: true,
-            trigger: "#content-3",
-            start: "top 60%",
-            end: "top 30%",
-            toggleActions:"restart none none reverse"
-        },
-        x: "-10vw",
-        alpha: "0",
-        ease:"ease"
+// gsap.from(
+//     "#content-1",
+//     {
+//         scrollTrigger: {
+//             // scrub: true,
+//             trigger: "#content-1",
+//             start: "top 60%",
+//             end: "top 30%",
+//             toggleActions:"restart none none reverse"
+//         },
+//         x: "-10vw",
+//         alpha: "0",
+//         ease:"ease"
         
-    }
-);
+//     }
+// );
+
+// gsap.from(
+//     "#content-2" ,
+//     {
+//         scrollTrigger: {
+//             // scrub: true,
+//             trigger: "#content-2",
+//             start: "top 60%",
+//             end: "top 30%",
+//             toggleActions:"restart none none reverse"
+//         },
+//         x: "10vw",
+//         alpha: "0",
+//         ease:"ease"
+        
+//     }
+// );
+
+// gsap.from(
+//     "#content-3",
+//     {
+//         scrollTrigger: {
+//             // scrub: true,
+//             trigger: "#content-3",
+//             start: "top 60%",
+//             end: "top 30%",
+//             toggleActions:"restart none none reverse"
+//         },
+//         x: "-10vw",
+//         alpha: "0",
+//         ease:"ease"
+        
+//     }
+// );
+
+
+
+
+//OLD STUFF !!
 // gsap.to(
 //     "#brass",
 //     {
