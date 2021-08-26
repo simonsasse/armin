@@ -7,9 +7,9 @@ ScrollTrigger.batch(
             batch,
             {
                 alpha:0,
-                x: "20vw",
+                x: "10vw",
                 ease: "ease",
-                scale: 0.5
+                scale: 0.9
             })
     }
 )
