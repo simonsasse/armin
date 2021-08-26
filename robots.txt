@@ -2,7 +2,6 @@
 # Tell Google not to crawl any URLs in the shopping cart or images in the icons folder,
 # because they won't be useful in Google Search results.
 User-agent: googlebot
-Disallow: /mobile-page.html
 Disallow: /impressum.html
 Disallow: /datenschutz.html
 Sitemap: https://armin-laschet.org/sitemap.xml
